@@ -48,6 +48,7 @@ class OptimizationTest(_test.TestCase):
                 Vehicle(
                     idx,
                     profile="driving-car",
+                    description="vehicle",
                     start=coord,
                     start_index=idx,
                     end=coord,

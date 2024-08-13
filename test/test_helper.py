@@ -204,6 +204,7 @@ ENDPOINT_DICT = {
             {
                 "id": 0,
                 "profile": "driving-car",
+                "description": "vehicle",
                 "start": PARAM_LINE[0],
                 "start_index": 0,
                 "end_index": 0,
@@ -215,6 +216,7 @@ ENDPOINT_DICT = {
             {
                 "id": 1,
                 "profile": "driving-car",
+                "description": "vehicle",
                 "start": PARAM_LINE[1],
                 "start_index": 1,
                 "end_index": 1,

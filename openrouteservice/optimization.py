@@ -283,6 +283,7 @@ class Vehicle:
         self,
         id,
         profile="driving-car",
+        description=None,
         start=None,
         start_index=None,
         end=None,
@@ -302,6 +303,9 @@ class Vehicle:
             "foot-hiking", "cycling-regular", "cycling-road","cycling-mountain",
             "cycling-electric",]. Default "driving-car".
         :type profile: str
+
+        :param description: A description of the vehicle.
+        :type description: str
 
         :param start: Coordinate for the vehicle to start from. If not specified, the start
             location will be the first visited job, determined by the optimization engine.
@@ -331,6 +335,9 @@ class Vehicle:
 
         self.id = id
         self.profile = profile
+
+        if description is not None:
+            self.description = description
 
         if start is not None:
             self.start = start
