@@ -291,6 +291,10 @@ class Vehicle:
         capacity=None,
         skills=None,
         time_window=None,
+        speed_factor=None,
+        max_tasks=None,
+        max_travel_time=None,
+        max_distance=None,
     ):
         """
         Create a Vehicle object for the optimization endpoint.
@@ -331,6 +335,19 @@ class Vehicle:
 
         :param time_window: A time_window object describing working hours for this vehicle.
         :param time_window: list of int or tuple of int
+
+        :param speed_factor: a double value in the range (0, 5] used to scale all vehicle travel times (defaults to 1.),
+            the respected precision is limited to two digits after the decimal point
+        :param speed_factor: float
+
+        :param max_tasks: an integer defining the maximum number of tasks in a route for this vehicle
+        :param max_tasks: int
+
+        :param max_travel_time: an integer defining the maximum travel time for this vehicle
+        :param max_travel_time: int
+
+        :param max_distance: an integer defining the maximum distance for this vehicle
+        :param max_distance: int
         """
 
         self.id = id
@@ -359,3 +376,15 @@ class Vehicle:
 
         if time_window is not None:
             self.time_window = time_window
+
+        if speed_factor is not None:
+            self.speed_factor = speed_factor
+
+        if max_tasks is not None:
+            self.max_tasks = max_tasks
+
+        if max_travel_time is not None:
+            self.max_travel_time = max_travel_time
+
+        if max_distance is not None:
+            self.max_distance = max_distance
